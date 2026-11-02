@@ -9,3 +9,90 @@
   border-radius: 4px;
   box-shadow: 12px 15px 25px rgba(0, 0, 0, 0.5);
 }
+/* BRADBURY CREEK BOOKSHELF */
+
+#bookshelf {
+  background: #172921;
+}
+
+#bookshelf .section-head h2 {
+  color: #d6b979;
+}
+
+#bookshelf .section-head p {
+  color: #d9d1bd;
+}
+
+#shelf-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.bookshelf-card {
+  background: #243b30;
+  border: 1px solid #a88d57;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.bookshelf-card:hover {
+  transform: translateY(-8px);
+}
+
+.bookshelf-cover {
+  width: 100%;
+  max-width: 210px;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 4px;
+  box-shadow: 8px 12px 20px rgba(0,0,0,0.5);
+}
+
+.bookshelf-card h3 {
+  color: #e8d5a5;
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.bookshelf-card .author {
+  color: #d5d9d0;
+}
+
+.bookshelf-card .tag {
+  display: inline-block;
+  color: #d6b979;
+  border: 1px solid #a88d57;
+  margin-top: 12px;
+}
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 768px) {
+  #shelf-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .bookshelf-card {
+    padding: 14px;
+  }
+
+  .bookshelf-cover {
+    height: 220px;
+  }
+
+  .bookshelf-card h3 {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 420px) {
+  #shelf-list {
+    grid-template-columns: 1fr;
+  }
+}
