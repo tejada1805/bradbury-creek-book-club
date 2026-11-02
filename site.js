@@ -54,8 +54,15 @@ document.getElementById("current-description").textContent=club.book.description
 document.getElementById("current-genre").textContent=club.book.genre;
 document.getElementById("event-list").innerHTML=club.events.map(e=>`<article class="mini-card"><p class="event-date"></p><h3></h3><p></p></article>`).join("");
 [...document.querySelectorAll("#event-list .mini-card")].forEach((card,i)=>{card.querySelector(".event-date").textContent=club.events[i].date;card.querySelector("h3").textContent=club.events[i].title;card.querySelector("p:last-child").textContent=club.events[i].description});
-document.getElementById("shelf-list").innerHTML=club.bookshelf.forEach((book)=>`<article class="mini-card"><div class="mini-icon">✧</div><h3></h3><p class="author"></p><span class="tag"></span></article>`).join("");
-[...document.querySelectorAll("#shelf-list .mini-card")].forEach((card,i)=>{const b=club.bookshelf[i];card.querySelector("h3").textContent=b.title;card.querySelector(".author").textContent=b.author;card.querySelector(".tag").textContent=b.genre});
+document.getElementById("shelf-list").innerHTML =
+  club.bookshelf.map(() => `
+    <article class="mini-card">
+      <div class="mini-icon">✧</div>
+      <h3></h3>
+      <p class="author"></p>
+      <span class="tag"></span>
+    </article>
+  `).join("");
 const join=document.getElementById("facebook-link");
 if(club.facebookUrl){join.href=club.facebookUrl;join.target="_blank";join.rel="noopener noreferrer";join.textContent="Visit Our Facebook Group"}
 else if(club.contactEmail){join.href="mailto:"+encodeURIComponent(club.contactEmail)+"?subject=Bradbury%20Creek%20Book%20Club%20Membership"}
