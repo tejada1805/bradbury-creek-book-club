@@ -54,15 +54,36 @@ document.getElementById("current-description").textContent=club.book.description
 document.getElementById("current-genre").textContent=club.book.genre;
 document.getElementById("event-list").innerHTML=club.events.map(e=>`<article class="mini-card"><p class="event-date"></p><h3></h3><p></p></article>`).join("");
 [...document.querySelectorAll("#event-list .mini-card")].forEach((card,i)=>{card.querySelector(".event-date").textContent=club.events[i].date;card.querySelector("h3").textContent=club.events[i].title;card.querySelector("p:last-child").textContent=club.events[i].description});
-document.getElementById("shelf-list").innerHTML =
-  club.bookshelf.map(() => `
-    <article class="mini-card">
-      <div class="mini-icon">✧</div>
-      <h3></h3>
-      <p class="author"></p>
-      <span class="tag"></span>
-    </article>
-  `).join("");
+
+const shelfList = document.getElementById("shelf-list");
+
+shelfList.innerHTML = "";
+
+club.bookshelf.forEach((book) => {
+  const card = document.createElement("article");
+  card.className = "mini-card bookshelf-card";
+
+  const cover = document.createElement("img");
+  cover.className = "bookshelf-cover";
+  cover.src = book.image;
+  cover.alt = `${book.title} by ${book.author}`;
+  cover.loading = "lazy";
+
+  const title = document.createElement("h3");
+  title.textContent = book.title;
+
+  const author = document.createElement("p");
+  author.className = "author";
+  author.textContent = book.author;
+
+  const genre = document.createElement("span");
+  genre.className = "tag";
+  genre.textContent = book.genre;
+
+  card.append(cover, title, author, genre);
+  shelfList.appendChild(card);
+});
+
 const join=document.getElementById("facebook-link");
 if(club.facebookUrl){join.href=club.facebookUrl;join.target="_blank";join.rel="noopener noreferrer";join.textContent="Visit Our Facebook Group"}
 else if(club.contactEmail){join.href="mailto:"+encodeURIComponent(club.contactEmail)+"?subject=Bradbury%20Creek%20Book%20Club%20Membership"}
