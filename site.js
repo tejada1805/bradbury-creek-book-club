@@ -11,10 +11,37 @@ const club = {
     {date:"COMING SOON",title:"Themed Reading Night",description:"A cozy evening inspired by the stories we love."},
     {date:"COMING SOON",title:"Bookish Activity",description:"Games, conversation, and surprises for our reading circle."}
   ],
-  bookshelf: [
-    {title:"Flock",author:"Kate Stewart",genre:"Romance"},
-    {title:"The Bayou Never Tells",author:"Chelley St. Clair",genre:"Mystery / Thriller"},
-    {title:"Dear Debbie",author:"Freida McFadden",genre:"Thriller"}
+  bookshelf: [ {
+    title: "Flock",
+    author: "Kate Stewart",
+    genre: "Romance",
+    image: "assets/flock.jpg"
+  },
+  {
+    title: "The Bayou Never Tells",
+    author: "Chelley St. Clair",
+    genre: "Mystery / Thriller",
+    image: "assets/bayou.jpg"
+  },
+  {
+    title: "Dear Debbie",
+    author: "Freida McFadden",
+    genre: "Thriller",
+    image: "assets/dear-debbie.jpg"
+  },
+  {
+    title: "Gray After Dark",
+    author: "Noelle W. Ihli",
+    genre: "Psychological Thriller",
+    image: "assets/gray-after-dark.jpg"
+  },
+  {
+    title: "The Witch",
+    author: "Freida McFadden",
+    genre: "Thriller",
+    image: "assets/the-witch.webp"
+  }
+   
   ],
   // Add your Facebook group's complete URL when ready, e.g. https://www.facebook.com/groups/...
   facebookUrl: "",
