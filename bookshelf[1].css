@@ -1,0 +1,29 @@
+.library-page{min-height:80vh;background:radial-gradient(ellipse at top,#2b4939,#101d19 65%);color:#f4ecdc;padding:60px max(20px,6vw) 100px}.library-intro{text-align:center;max-width:800px;margin:0 auto 55px}.library-intro h1{font-size:clamp(44px,7vw,78px);font-weight:500;color:#dfc68e;margin:14px 0}.library-intro p{color:#d5d8cd}.library-intro label{display:block;margin:30px 0 8px;font-size:13px}.library-intro input{width:min(100%,440px);padding:14px 16px;border:1px solid #bda66e;background:#f9f4e8;color:#16271e;border-radius:4px;font:inherit}.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:34px 26px;max-width:1150px;margin:auto}.library-book{appearance:none;background:linear-gradient(#263f32,#1b2e26);color:#f4ebd9;border:1px solid #b89a5c;text-align:center;padding:20px 15px;cursor:pointer;min-width:0;box-shadow:0 14px 0 #59452d,0 18px 0 #b68e52;transition:transform .2s}.library-book:hover,.library-book:focus-visible{transform:translateY(-6px);outline:2px solid #dfc68e;outline-offset:3px}.library-book img{height:240px;width:100%;object-fit:contain;display:block;margin:0 auto 12px;filter:drop-shadow(7px 7px 5px #0008)}.library-book strong{font-family:'Cormorant Garamond',serif;font-size:24px;display:block;line-height:1.15}.library-book small{display:block;color:#d3c3a4;margin-top:8px}#empty-message{text-align:center}dialog{width:min(90vw,750px);background:#f5efdf;color:#203329;border:2px solid #a68b55;padding:30px;box-shadow:0 20px 90px #0008}dialog::backdrop{background:#07120dcc}.dialog-layout{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:start}.dialog-layout img{width:100%;max-height:290px;object-fit:contain}.dialog-layout h2{font-size:43px;margin:8px 0}.close-dialog{float:right;border:0;background:none;font-size:30px;cursor:pointer;color:#213528}@media(max-width:650px){.library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 12px}.library-book{padding:12px 8px}.library-book img{height:190px}.library-book strong{font-size:20px}.dialog-layout{grid-template-columns:1fr}.dialog-layout img{max-height:210px}}@media(max-width:360px){.library-grid{grid-template-columns:1fr}}
+
+/* Multi-genre reading room: distinct accents in one cohesive dark library */
+.library-page{background:radial-gradient(ellipse at 15% 10%,#58323c66,transparent 38%),radial-gradient(ellipse at 90% 18%,#435e704d,transparent 36%),radial-gradient(ellipse at 50% 75%,#6a563544,transparent 55%),linear-gradient(150deg,#101b19,#1c3027 55%,#121b20)}
+.library-intro h1{letter-spacing:.015em}
+.genre-filter{max-width:1100px;margin:0 auto 44px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+.genre-button{background:#162b26;color:#e4d4b1;border:1px solid #a88b59;padding:10px 15px;border-radius:30px;cursor:pointer;font:600 12px 'DM Sans',sans-serif}
+.genre-button:hover,.genre-button:focus-visible,.genre-button.active{background:#d6b979;color:#18261e;outline-offset:2px}
+.library-book{border-top:4px solid var(--genre-accent,#d6b979)}
+.library-book[data-genre="Fantasy"]{--genre-accent:#88b79a}
+.library-book[data-genre="Dark Romance"]{--genre-accent:#b76a79}
+.library-book[data-genre="Romance"]{--genre-accent:#e3b3ac}
+.library-book[data-genre="Psychological Thriller"]{--genre-accent:#9cacc3}
+.library-book[data-genre="Historical Fiction"],.library-book[data-genre="Historical Nonfiction"]{--genre-accent:#d6b979}
+.library-book:focus-visible{outline:3px solid #f5d38b}
+#dialog-rating,#dialog-meeting{color:#52684e;font-size:13px}
+
+/* Genre-specific background when a book is opened */
+#book-dialog{background-color:#15251e;background-image:linear-gradient(135deg,#233e30,#111c18);background-size:cover;background-position:center;color:#f8f0df;border:2px solid #d6b979;max-height:90vh;overflow:auto}
+#book-dialog::backdrop{background:#07110de0;backdrop-filter:blur(5px)}
+#book-dialog .eyebrow,#book-dialog #dialog-genre{color:#e6c681}
+#book-dialog #dialog-rating,#book-dialog #dialog-meeting,#book-dialog #dialog-author{color:#f0e7d6}
+#book-dialog .close-dialog{color:white;background:#122018aa;border-radius:50%;width:42px;height:42px}
+#book-dialog[data-genre="Fantasy"]{background-image:radial-gradient(circle at 75% 12%,#c1b46a77,transparent 32%),linear-gradient(120deg,#102f2c,#244f3b 55%,#101e26)}
+#book-dialog[data-genre="Dark Romance"]{background-image:radial-gradient(circle at 80% 15%,#9d405b88,transparent 42%),linear-gradient(125deg,#160f1b,#482232 55%,#190e18)}
+#book-dialog[data-genre="Romance"]{background-image:radial-gradient(circle at 80% 15%,#d5a3a777,transparent 40%),linear-gradient(120deg,#392b34,#77515a 65%,#2c202b)}
+#book-dialog[data-genre="Psychological Thriller"]{background-image:radial-gradient(circle at 80% 10%,#78929b77,transparent 36%),linear-gradient(125deg,#0d1822,#263944 60%,#111821)}
+#book-dialog[data-genre="Historical Fiction"],#book-dialog[data-genre="Historical Nonfiction"]{background-image:radial-gradient(circle at 80% 15%,#b99a5e77,transparent 38%),linear-gradient(125deg,#272116,#57442c 60%,#241e1b)}
+#book-dialog .dialog-layout{padding-top:15px}
