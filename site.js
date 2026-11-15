@@ -44,7 +44,7 @@ const club = {
               { title: "Hooked",
     author: "Emily Mcintire",
     genre: "Dark Romance",
-    image: "hooked.jpg"}
+    image: "hooked.jpeg"}
    
   ],
   // Add your Facebook group's complete URL when ready, e.g. https://www.facebook.com/groups/...
