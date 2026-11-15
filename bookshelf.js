@@ -4,7 +4,14 @@ const books = [
  {title:'The Bayou Never Tells',author:'Chelley St. Clair',genre:'Psychological Thriller',image:'assets/bayou.jpg',description:'Add your club discussion notes or a short description here.',rating:'Not rated yet',meeting:'Meeting details to be added'},
  {title:'Dear Debbie',author:'Freida McFadden',genre:'Psychological Thriller',image:'assets/dear-debbie.jpg',description:'Add your club discussion notes or a short description here.',rating:'Not rated yet',meeting:'Meeting details to be added'},
  {title:'Gray After Dark',author:'Noelle W. Ihli',genre:'Psychological Thriller',image:'assets/gray-after-dark.jpg',description:'Add your club discussion notes or a short description here.',rating:'Not rated yet',meeting:'Meeting details to be added'},
- {title:'The Witch',author:'Freida McFadden',genre:'Psychological Thriller',image:'assets/the-witch.webp',description:'Add your club discussion notes or a short description here.',rating:'Not rated yet',meeting:'Meeting details to be added'}
+ {title:'The Witch',author:'Freida McFadden',genre:'Psychological Thriller',image:'assets/the-witch.webp',description:'Add your club discussion notes or a short description here.',rating:'Not rated yet',meeting:'Meeting details to be added'},
+ {title: 'Hooked',
+  author: 'Emily McIntire',
+  genre: 'Dark Romance / Fairy-Tale Retelling',
+  image: 'assets/hooked.jpeg',
+  description: 'A dark, twisted Peter Pan reimagining filled with revenge, dangerous secrets, forbidden attraction, and morally gray characters.',
+  rating: 'Not rated yet',
+  meeting: 'Meeting details to be added'}
 ];
 // Genre choices can be assigned to any book in the list above.
 const genres = ['All Books','Fantasy','Dark Romance','Romance','Psychological Thriller','Historical Fiction','Historical Nonfiction'];
