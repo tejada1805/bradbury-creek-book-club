@@ -1,10 +1,10 @@
 // EDIT YOUR CLUB DETAILS HERE. All example dates are intentionally unspecified.
 const club = {
   book: {
-    title: "The Witch",
-    author: "Freida Mcfadden",
-    description: "Psychological thriller with a dual timeline.",
-    genre: "Thriller"
+    title: "Hooked",
+    author: "Emily Mcintire",
+    description: "Dark romance with a twisted fairy-tale retelling, dangerous secrets, and an irresistible villain.",
+    genre: "Dark Romance"
   },
   events: [
     {date:"DATE TO BE ANNOUNCED",title:"Next Book Club Gathering",description:"Our next discussion, theme, and meeting details will be posted here."},
